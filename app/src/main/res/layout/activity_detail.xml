@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail.DetailActivity">
+
+    <TextView
+        android:id="@+id/detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Details"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="25dp"
+        />
+
+    <ImageView
+        android:id="@+id/detail_img"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/origin"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toBottomOf="@id/detail_title"
+        android:layout_marginTop="30dp"
+
+        />
+        <TextView
+            android:id="@+id/food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Salad"
+            android:textColor="@color/purple_500"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_img"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/detail_img"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/count"
+        android:layout_marginTop="25dp"
+        />
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/detail_img"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/minus"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/minus"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/detail_img"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        />
+
+        <TextView
+            android:id="@+id/food_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/food_name"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Snack"
+            />
+        <TextView
+            android:id="@+id/food_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/food_type"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            android:textColor="@color/purple_700"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Price - 6000 MMK"/>
+
+        <TextView
+            android:id="@+id/food_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/food_price"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:text="very delicious food.very delicious food.very delicious food."
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/order"
+            android:layout_width="179dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:text="Order Now"
+            android:textAllCaps="false"
+            app:cornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/food_desc" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
